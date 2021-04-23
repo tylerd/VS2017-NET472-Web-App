@@ -15,5 +15,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup .NET
       uses: microsoft/setup-msbuild@v1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+    - name: NuGet Restore
+      run: nuget restore VS2017-NET472-Web-App.sln
     - name: Build
       run: msbuild VS2017-NET472-Web-App/VS2017-NET472-Web-App.csproj
