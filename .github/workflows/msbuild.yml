@@ -20,4 +20,4 @@ jobs:
     - name: NuGet Restore
       run: nuget restore VS2017-NET472-Web-App.sln
     - name: Build
-      run: msbuild VS2017-NET472-Web-App/VS2017-NET472-Web-App.csproj /p:UseSharedCompilation=false /t:rebuild /p:Configuration="Debug" /p:MvcBuildViews=true
+      run: msbuild VS2017-NET472-Web-App.sln /p:UseSharedCompilation=false /t:rebuild /p:Platform="Any CPU" /p:Configuration="Debug" /p:MvcBuildViews=true
